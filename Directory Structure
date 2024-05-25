@@ -1,0 +1,9 @@
+/task-planner-app
+|-- /JS
+|   |-- taskAPI.js
+|   |-- taskUI.js
+|   |-- main.js
+|-- /CSS
+|   |-- styles.css
+|-- index.html
+|-- README.md
