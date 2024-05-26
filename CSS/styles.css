@@ -1,92 +1,91 @@
-/* General Body Styles */
 body {
-    background-color: #f8f9fa; /* A light grey background */
-    font-family: 'Arial', sans-serif; /* Consistent font styling */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    color: #333; /* Default text color for better readability */
+    background-color: #f4f4f9;
+    color: #333333;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Container styling for central alignment */
-.container {
-    background-color: #fff; /* White background for content areas */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners for the container */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-top: 30px; /* Space above the container */
-    width: auto; /* Auto width based on content */
-    max-width: 960px; /* Maximum width */
-    margin-left: auto; /* Center align the container */
-    margin-right: auto; /* Center align the container */
+/* Navbar or Header Customization */
+.header {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 0;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
 }
 
-/* Header Styles */
-h1, h2 {
-    color: #333; /* Dark grey color for headings */
-    text-align: center; /* Center-align headings */
+/* Buttons Customization */
+.btn-primary {
+    background-color: #ff4500;
+    border-color: #ff4500;
 }
 
-/* Form Styling */
-.form-wrapper {
-    background: #f1f1f1; /* Light grey background */
-    padding: 20px; /* Padding around the form */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 20px; /* Space below the form */
+.btn-primary:hover {
+    background-color: darken(#ff4500, 10%);
+    border-color: darken(#ff4500, 10%);
 }
 
-/* Input and TextArea Styles */
-input[type="text"],
-input[type="date"],
-select,
-textarea {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding inside inputs */
-    margin-top: 8px; /* Margin top for spacing */
-    margin-bottom: 16px; /* Margin bottom for spacing */
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 4px; /* Rounded corners for inputs */
-    box-sizing: border-box; /* Border-box sizing model */
-}
-
-/* Buttons Styling */
-button {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* White text */
-    padding: 14px 20px; /* Padding inside button */
-    margin: 8px 0; /* Margin for spacing */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-/* Error Message Styling */
-#error {
-    color: #e74c3c; /* Red color for errors */
-    font-weight: bold; /* Bold font for emphasis */
-    margin-bottom: 10px; /* Space below the error message */
-}
-
-/* Card Wrapper Styling */
-.card-wrapper {
-    padding: 20px; /* Padding around cards */
-}
-
+/* Card Enhancements */
 .card {
-    background: hsl(0, 0%, 100%); /* White background for cards */
-    border: 1px solid #ddd; /* Light grey border */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 20px; /* Space below each card */
-    padding: 15px; /* Padding inside cards */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px; /* Less padding on smaller screens */
-    }
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Grid */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 15px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 70%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.btn-danger {
+    background-color: red;
+    border-color: red;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+    border-color: darkred;
 }
