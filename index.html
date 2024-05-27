@@ -5,29 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat and Dog Gallery</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mt-5">Cat Image Search</h1>
+        <h1 class="text-center mt-5">Cat and Dog Image Gallery</h1>
         <div id="search-area" class="text-center mt-3">
-            <select id="breed-select" class="form-control">
-                <option value="">Select a breed</option>
-            </select>
-            <button onclick="searchImages()" class="btn btn-primary mt-2">Search by Breed</button>
-            
+            <input type="text" id="search-box" placeholder="Enter breed ID (e.g., beng)" class="form-control">
+            <button onclick="searchImages()" class="btn btn-primary mt-2">Search</button>
         </div>
         <div id="gallery" class="row mt-3"></div>
     </div>
-
-    <!-- Lightbox modal -->
-<div id="lightbox-modal" class="lightbox" style="display:none;">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img class="lightbox-content" id="lightbox-image">
-</div>
-
-    <script src="JS/api.js"></script>
-    <script src="JS/ui.js"></script>
-    <script src="JS/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
