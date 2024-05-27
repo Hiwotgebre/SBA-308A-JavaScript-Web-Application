@@ -1,54 +1,95 @@
-/* styles.css */
+/* Base settings */
 body {
-    background-color: #f4f4f9;
     font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;  /* Light grey background for a modern look */
+    color: #333;                /* Dark grey text for better readability */
+    margin: 0;
+    padding: 0;
 }
 
-.gallery-container {
-    padding: 20px 0;
+/* Container for centered and padded content */
+.container {
+    width: 90%;
+    max-width: 1200px;  /* Maximum width to ensure content is not too stretched on larger screens */
+    margin: 20px auto;
+    padding: 20px;
+    background: white;   /* White background for the content area */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow around the container */
+}
+
+/* Styling the header */
+h1 {
+    color: #007bff;  /* A shade of blue for a fresh, modern look */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Search area styling */
+#search-area {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;  /* Spacing between elements */
+    margin-bottom: 20px;
+}
+
+#search-box {
+    flex-grow: 1;  /* Allows the search box to grow and fill space */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;  /* Rounded corners */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+}
+
+ /* button:hover {
+    background-color: #887821;  /* Darker shade of green on hover *} */
+
+/* Gallery grid */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    grid-gap: 15px;  /* Spacing between cards */
 }
 
 .card {
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    background: #fff;
+    border: 1px solid #ddd;  /* Light border for each card */
+    border-radius: 5px;
+    overflow: hidden;  /* Ensures nothing overflows the rounded borders */
+    transition: transform 0.3s, box-shadow 0.3s;  /* Smooth transitions for scale and shadow */
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(3.05);  /* Slightly scale up cards on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);  /* Deeper shadow on hover for a "lifting" effect */
 }
 
-.card img {
+/* .card img {
     width: 100%;
-    height: auto;
-    display: block;
-}
+    height: 200px;  /* Fixed height for uniformity */
+    object-fit: cover;  /* Ensures images cover the area nicely */
+} */
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-
-.pagination li {
-    margin: 0 5px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-.pagination li.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
+/* Favorite button styles */
 .favorite-button {
-    background: none;
-    border: none;
-    color: red;
+    all: unset;  /* Removes default button styling */
     cursor: pointer;
+    font-size: 24px;
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.8;
+}
+
+.favorite-button:hover {
+    opacity: 1;
 }
